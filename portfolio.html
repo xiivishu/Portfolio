@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishwas | Portfolio</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f0f;
+      color: #f2f2f2;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffc8;
+      text-decoration: none;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f2f2f2;
+      transition: 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #00ffc8;
+      border-bottom: 2px solid #00ffc8;
+      padding-bottom: 3px;
+    }
+    section {
+      padding: 60px 10%;
+    }
+
+    /* HOME */
+    .home {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .home-img {
+      flex: 1 1 45%;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 1; /* photo on left */
+    }
+    .home-img img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 50%;
+      border: 4px solid #00ffc8;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+    }
+
+    .home-content {
+      flex: 1 1 50%;
+      order: 2; /* content on right */
+      color: #aaa;
+      min-width: 300px;
+    }
+    .home-content h1 {
+      font-size: 36px;
+      color: #00ffc8;
+      margin-bottom: 8px;
+    }
+    .home-content h3 {
+      font-size: 22px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .home-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+    }
+    .social-icons a {
+      font-size: 22px;
+      color: #00ffc8;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* SKILLS */
+    .skills h2,
+    .education h2,
+    .contact h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #00ffc8;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills li {
+      background: #1a1a1a;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 4px solid #00ffc8;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* EDUCATION */
+    .education-item {
+      background: #1a1a1a;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #00ffc8;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .education-item h3 {
+      margin-bottom: 5px;
+    }
+
+    /* CONTACT */
+    .contact p {
+      margin: 8px 0;
+      color: #ccc;
+    }
+    .contact i {
+      margin-right: 10px;
+      color: #00ffc8;
+    }
+
+    /* Click animation style */
+    .active-block {
+      transform: scale(1.05);
+      font-weight: bold;
+      background-color: #2a2a2a !important;
+      color: #00ffc8 !important;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .home {
+        flex-direction: column;
+      }
+      .home-img, .home-content {
+        order: unset;
+        flex: 1 1 100%;
+        min-width: unset;
+        text-align: center;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+      .home-content p {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="logo">Vishwas</a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section class="home" id="home">
+    <div class="home-img" data-aos="fade-right">
+      <img src="profile.jpg" alt="Profile Photo" />
+    </div>
+    <div class="home-content" data-aos="fade-left">
+      <h1>Hi, It's <span>Vishwas</span></h1>
+      <h3>I'm a Web Developer</h3>
+      <p>
+        I’m a BCA student with a strong interest in full-stack web development. I have hands-on experience with HTML, CSS, and JavaScript, and I’m currently learning React and Node.js. I'm building real-world projects to become internship-ready by 2026. I’m also exploring opportunities in government IT roles.<br><br>
+        I’ve played basketball at the state and national levels. Sports have helped me build discipline, teamwork, and focus.
+      </p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/xiivishu" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:pachauri0558@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/8534038842" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/vishwasp.12" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul>
+      <li data-aos="fade-right" data-aos-delay="100">HTML5, CSS3, </li>
+       <li data-aos="fade-right" data-aos-delay="300">JavaScript (learning)</li>
+      <li data-aos="fade-right" data-aos-delay="200">React, Redux , Node.js & MongoDB  (will start )</li>
+      <li data-aos="fade-right" data-aos-delay="400">Responsive Design & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education" data-aos="fade-up">
+    <h2 data-aos="fade-down">Education</h2>
+    <div class="education-item" data-aos="zoom-in">
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p>Shri Varshney College, Aligarh<br>2025 – 2028 (Expected)</p>
+    </div>
+    <div class="education-item" data-aos="zoom-in" data-aos-delay="100">
+      <h3>12th (PCM) – 71.4%</h3>
+      <p>Year: 2025</p>
+    </div>
+    <div class="education-item" data-aos="zoom-in" data-aos-delay="200">
+      <h3>10th – 82%</h3>
+      <p>Year: 2022</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Info</h2>
+    <p><i class="fas fa-envelope"></i> pachauri0558@gmail.com</p>
+    <p><i class="fas fa-phone"></i> +91 8534038842</p>
+    <p><i class="fas fa-map-marker-alt"></i> Aligarh, Uttar Pradesh, India</p>
+  </section>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Navigation active link switching
+    const navLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("section");
+
+    window.onscroll = () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+    };
+
+    // Click pop-out animation for skills and education blocks
+    const blocks = document.querySelectorAll('.skills li, .education-item');
+
+    blocks.forEach(block => {
+      block.addEventListener('click', () => {
+        blocks.forEach(b => b.classList.remove('active-block')); // Remove from others
+        block.classList.add('active-block'); // Add to clicked
+      });
+    });
+  </script>
+
+</body>
+</html>
